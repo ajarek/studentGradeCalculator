@@ -22,7 +22,10 @@ export class Card{
         const btn = document.createElement("button");
         btn.innerHTML = "Show Percentage";
         wrapperBtn.appendChild(btn);
-        inputs.append(webPrograming.render(),maths.render(),Computer.render(),Physics.render(),wrapperBtn);
+        const result = document.createElement("div");
+        result.classList.add("result");
+        result.innerHTML = "Result:";
+        inputs.append(webPrograming.render(),maths.render(),Computer.render(),Physics.render(),wrapperBtn,result);
         row.append(title,inputs);
         return row;
        }
